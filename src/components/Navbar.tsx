@@ -29,10 +29,16 @@ const Navbar = () => {
         scrolled ? 'bg-white bg-opacity-95 shadow-md py-2' : 'bg-transparent py-4'
       )}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="flex items-center">
-          <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-ge-blue">
-            <span className="text-ge-red">GLOBAL</span> EYE
+          <h1 className={cn(
+            "text-lg sm:text-xl md:text-2xl font-bold transition-colors",
+            scrolled ? "text-ge-blue" : "text-white"
+          )}>
+            <span className={cn(
+              "transition-colors",
+              scrolled ? "text-ge-red" : "text-white"
+            )}>GLOBAL</span> EYE
           </h1>
         </a>
 
@@ -42,7 +48,10 @@ const Navbar = () => {
             <a 
               key={index}
               href={`#${['home', 'about', 'services', 'contact'][index]}`}
-              className="text-ge-dark hover:text-ge-red transition-colors font-medium"
+              className={cn(
+                "hover:text-ge-red transition-colors font-medium",
+                scrolled ? "text-ge-dark" : "text-white"
+              )}
             >
               {item}
             </a>
@@ -53,8 +62,12 @@ const Navbar = () => {
         <button 
           className="md:hidden p-2 focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X /> : <Menu />}
+          {isMenuOpen ? 
+            <X className={scrolled ? "text-ge-dark" : "text-white"} /> : 
+            <Menu className={scrolled ? "text-ge-dark" : "text-white"} />
+          }
         </button>
       </div>
 

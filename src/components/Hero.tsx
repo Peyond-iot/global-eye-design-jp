@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-[50vh] flex items-center justify-center overflow-hidden"
     >
       {/* Background image with overlay */}
       <div className="absolute inset-0 w-full h-full">
@@ -15,13 +15,13 @@ const Hero = () => {
           alt="Tokyo cityscape" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-ge-blue/70"></div>
+        <div className="absolute inset-0 bg-ge-blue/60"></div>
       </div>
 
       {/* Content container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 flex flex-col items-center justify-center text-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 flex flex-col items-center justify-center text-center">
         {/* Logo */}
-        <div className="mb-10 w-full max-w-md mx-auto">
+        <div className="mb-8 w-full max-w-xs mx-auto">
           <img 
             src="/lovable-uploads/5518a94b-9cda-473f-84fd-75b513f94f4b.png" 
             alt="GLOBAL EYE Logo" 
@@ -68,7 +68,7 @@ const Hero = () => {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-0 w-full flex justify-center animate-bounce">
+      <div className="absolute bottom-4 left-0 w-full flex justify-center animate-bounce">
         <a 
           href="#about" 
           className="p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-all"
