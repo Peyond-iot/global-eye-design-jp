@@ -1,34 +1,37 @@
 
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section 
       id="home" 
-      className="relative h-[50vh] flex items-center justify-center overflow-hidden"
+      className={`relative ${isMobile ? 'h-[40vh]' : 'h-[60vh]'} flex items-center justify-center overflow-hidden`}
     >
-      {/* Background image with overlay */}
+      {/* Background image with less overlay opacity for better clarity */}
       <div className="absolute inset-0 w-full h-full">
         <img 
           src="/lovable-uploads/6fd9fd41-a4b8-4021-b483-0c13546d8127.png" 
           alt="Tokyo cityscape" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-ge-blue/60"></div>
+        <div className="absolute inset-0 bg-ge-blue/40 backdrop-blur-[2px]"></div>
       </div>
 
       {/* Content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 flex flex-col items-center justify-center text-center">
         {/* Slogan and content */}
         <div className="max-w-3xl mx-auto fade-in-view">
-          <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-4 drop-shadow-md">
             あなたの将来をつなぐ
           </h2>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
             グローバルな視点でビジネスをサポート
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8">
+          <p className="text-lg md:text-xl text-white mb-8 drop-shadow-md">
             人材紹介、ホテル清掃サービス、留学支援業務を通じて
             <br className="hidden sm:block" />
             お客様のニーズに合わせた最適なソリューションを提供します
@@ -37,7 +40,7 @@ const Hero = () => {
             <Button 
               variant="secondary" 
               size="lg"
-              className="group"
+              className="group shadow-lg"
               asChild
             >
               <a href="#services">
@@ -47,7 +50,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg"
-              className="bg-transparent border-white text-white hover:bg-white/10"
+              className="bg-transparent border-white text-white hover:bg-white/20 shadow-lg"
               asChild
             >
               <a href="#contact">
