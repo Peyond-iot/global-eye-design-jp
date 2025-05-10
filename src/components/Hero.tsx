@@ -1,19 +1,39 @@
 
 import { ArrowRight } from 'lucide-react';
+import { Button } from './ui/button';
 
 const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: 'linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.8)), url("https://images.unsplash.com/photo-1582562124811-c09040d0a901?q=80&w=1920&auto=format&fit=crop")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-3xl mx-auto animate-fade-in">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 w-full h-full">
+        <img 
+          src="/lovable-uploads/6fd9fd41-a4b8-4021-b483-0c13546d8127.png" 
+          alt="Tokyo cityscape" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-ge-blue/70"></div>
+      </div>
+
+      {/* Content container */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 flex flex-col items-center justify-center text-center">
+        {/* Logo */}
+        <div className="mb-10 w-full max-w-md mx-auto">
+          <img 
+            src="/lovable-uploads/5518a94b-9cda-473f-84fd-75b513f94f4b.png" 
+            alt="GLOBAL EYE Logo" 
+            className="w-full h-auto"
+          />
+        </div>
+
+        {/* Slogan and content */}
+        <div className="max-w-3xl mx-auto fade-in-view">
+          <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-4">
+            あなたの将来をつなぐ
+          </h2>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
             グローバルな視点でビジネスをサポート
           </h1>
@@ -22,15 +42,32 @@ const Hero = () => {
             <br className="hidden sm:block" />
             お客様のニーズに合わせた最適なソリューションを提供します
           </p>
-          <a 
-            href="#services" 
-            className="inline-flex items-center px-6 py-3 bg-ge-red text-white rounded-md hover:bg-red-700 transition-colors"
-          >
-            サービスを見る <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="secondary" 
+              size="lg"
+              className="group"
+              asChild
+            >
+              <a href="#services">
+                サービスを見る <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="bg-transparent border-white text-white hover:bg-white/10"
+              asChild
+            >
+              <a href="#contact">
+                お問い合わせ
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
       
+      {/* Scroll indicator */}
       <div className="absolute bottom-10 left-0 w-full flex justify-center animate-bounce">
         <a 
           href="#about" 

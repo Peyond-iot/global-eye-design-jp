@@ -34,6 +34,11 @@ const Index = () => {
       window.removeEventListener('scroll', handleScrollAnimation);
     };
   }, []);
+
+  // Set page title and metadata
+  useEffect(() => {
+    document.title = "GLOBAL EYE - あなたの将来をつなぐ";
+  }, []);
   
   return (
     <div className="min-h-screen">
