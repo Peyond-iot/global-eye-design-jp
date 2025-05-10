@@ -20,15 +20,6 @@ const Hero = () => {
 
       {/* Content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 flex flex-col items-center justify-center text-center">
-        {/* Logo */}
-        <div className="mb-8 w-full max-w-xs mx-auto">
-          <img 
-            src="/lovable-uploads/5518a94b-9cda-473f-84fd-75b513f94f4b.png" 
-            alt="GLOBAL EYE Logo" 
-            className="w-full h-auto"
-          />
-        </div>
-
         {/* Slogan and content */}
         <div className="max-w-3xl mx-auto fade-in-view">
           <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-4">

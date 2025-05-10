@@ -31,15 +31,11 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#" className="flex items-center">
-          <h1 className={cn(
-            "text-lg sm:text-xl md:text-2xl font-bold transition-colors",
-            scrolled ? "text-ge-blue" : "text-white"
-          )}>
-            <span className={cn(
-              "transition-colors",
-              scrolled ? "text-ge-red" : "text-white"
-            )}>GLOBAL</span> EYE
-          </h1>
+          <img 
+            src="/lovable-uploads/5518a94b-9cda-473f-84fd-75b513f94f4b.png" 
+            alt="GLOBAL EYE Logo" 
+            className="h-10 md:h-12" 
+          />
         </a>
 
         {/* Desktop Navigation */}
