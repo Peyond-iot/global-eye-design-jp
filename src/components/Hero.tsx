@@ -45,6 +45,12 @@ const Hero = () => {
               variant="secondary" 
               size="lg"
               className="group shadow-md bg-ge-red hover:bg-red-700 text-white"
+              onClick={() => {
+                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                // Update the active section in the parent component
+                const event = new CustomEvent('navClick', { detail: 'services' });
+                window.dispatchEvent(event);
+              }}
             >
               サービスを見る <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>

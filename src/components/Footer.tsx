@@ -28,7 +28,7 @@ const Footer = ({ onNavClick }: FooterProps) => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-2">サービス</h3>
+            <h3 className="text-lg font-bold mb-2 text-white">サービス</h3>
             <ul className="space-y-1 text-sm">
               <li>
                 <a 
@@ -70,7 +70,7 @@ const Footer = ({ onNavClick }: FooterProps) => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-2">お問い合わせ</h3>
+            <h3 className="text-lg font-bold mb-2 text-white">お問い合わせ</h3>
             <address className="not-italic text-white/80 text-sm">
               <p>電話: 048-278-4550</p>
               <p>メール: globaleye025@gmail.com</p>

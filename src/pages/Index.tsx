@@ -31,9 +31,17 @@ const Index = () => {
     // Add scroll event listener
     window.addEventListener('scroll', handleScrollAnimation);
     
+    // Event listener for navigation from hero button
+    const handleNavClick = (e: CustomEvent) => {
+      setActiveSection(e.detail);
+    };
+    
+    window.addEventListener('navClick', handleNavClick as EventListener);
+    
     // Clean up
     return () => {
       window.removeEventListener('scroll', handleScrollAnimation);
+      window.removeEventListener('navClick', handleNavClick as EventListener);
     };
   }, []);
 
