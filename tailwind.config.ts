@@ -63,11 +63,23 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for GLOBAL EYE
-				'ge-blue': '#1a365d',
+				// Enhanced blue color palette
+				'ge-blue': '#0c4a6e', // Deeper blue 
 				'ge-red': '#e53e3e',
-				'ge-gray': '#f7fafc',
-				'ge-dark': '#2d3748',
+				'ge-gray': '#f0f9ff', // Light blue tint
+				'ge-dark': '#1e3a8a',
+				blue: {
+					50: '#eff6ff',
+					100: '#dbeafe',
+					200: '#bfdbfe',
+					300: '#93c5fd',
+					400: '#60a5fa',
+					500: '#3b82f6',
+					600: '#2563eb',
+					700: '#1d4ed8',
+					800: '#1e40af',
+					900: '#1e3a8a',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

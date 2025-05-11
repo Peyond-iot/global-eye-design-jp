@@ -3,10 +3,14 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const Navbar = () => {
+interface NavbarProps {
+  activeSection: string;
+  onNavClick: (section: string) => void;
+}
+
+const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,19 +19,6 @@ const Navbar = () => {
       } else {
         setScrolled(false);
       }
-
-      // Update active section based on scroll position
-      const sections = ['home', 'about', 'services', 'contact'];
-      const currentSection = sections.find(section => {
-        const element = document.getElementById(section);
-        if (!element) return false;
-        const rect = element.getBoundingClientRect();
-        return rect.top <= 100 && rect.bottom >= 100;
-      });
-
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -35,6 +26,11 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleNavigation = (sectionId: string) => {
+    onNavClick(sectionId);
+    setIsMenuOpen(false);
+  };
 
   return (
     <header 
@@ -46,7 +42,14 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="flex items-center">
+        <a 
+          href="#" 
+          onClick={(e) => { 
+            e.preventDefault(); 
+            handleNavigation('home'); 
+          }} 
+          className="flex items-center"
+        >
           <img 
             src="/lovable-uploads/5518a94b-9cda-473f-84fd-75b513f94f4b.png" 
             alt="GLOBAL EYE Logo" 
@@ -61,7 +64,11 @@ const Navbar = () => {
             return (
               <a 
                 key={index}
-                href={`#${sectionId}`}
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavigation(sectionId);
+                }}
                 className={cn(
                   "transition-colors font-medium relative px-2 py-1",
                   "after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full",
@@ -101,14 +108,17 @@ const Navbar = () => {
               return (
                 <a 
                   key={index}
-                  href={`#${sectionId}`}
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation(sectionId);
+                  }}
                   className={cn(
                     "py-3 px-4 transition-colors font-medium rounded-md",
                     activeSection === sectionId
                       ? "text-ge-red bg-gray-100"
                       : "text-ge-dark hover:text-ge-red hover:bg-gray-100"
                   )}
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item}
                 </a>

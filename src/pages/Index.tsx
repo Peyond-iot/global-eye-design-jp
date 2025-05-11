@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -8,6 +8,8 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const [activeSection, setActiveSection] = useState('home');
+
   // Function to handle scroll animations
   useEffect(() => {
     const handleScrollAnimation = () => {
@@ -23,38 +25,27 @@ const Index = () => {
       });
     };
     
-    // Smooth scrolling for anchor links
-    const handleSmoothScroll = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
-        const id = target.getAttribute('href');
-        const element = document.querySelector(id || '');
-        
-        if (element) {
-          e.preventDefault();
-          window.scrollTo({
-            top: element.getBoundingClientRect().top + window.scrollY - 80,
-            behavior: 'smooth'
-          });
-        }
-      }
-    };
-    
     // Initial check for elements in view
     handleScrollAnimation();
     
     // Add scroll event listener
     window.addEventListener('scroll', handleScrollAnimation);
     
-    // Add click event listener for smooth scrolling
-    document.addEventListener('click', handleSmoothScroll);
-    
     // Clean up
     return () => {
       window.removeEventListener('scroll', handleScrollAnimation);
-      document.removeEventListener('click', handleSmoothScroll);
     };
   }, []);
+
+  // Handle navigation click
+  const handleNavClick = (section: string) => {
+    setActiveSection(section);
+    // Scroll to top when changing sections
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   // Set page title and metadata
   useEffect(() => {
@@ -62,19 +53,30 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <div className="bg-white">
-        <About />
-      </div>
-      <div className="bg-ge-gray">
-        <Services />
-      </div>
-      <div className="bg-white">
-        <Contact />
-      </div>
-      <Footer />
+    <div className="min-h-screen bg-white">
+      <Navbar onNavClick={handleNavClick} activeSection={activeSection} />
+      
+      {activeSection === 'home' && <Hero />}
+      
+      {activeSection === 'about' && (
+        <div className="bg-white pt-20">
+          <About />
+        </div>
+      )}
+      
+      {activeSection === 'services' && (
+        <div className="bg-ge-gray pt-20">
+          <Services />
+        </div>
+      )}
+      
+      {activeSection === 'contact' && (
+        <div className="bg-white pt-20">
+          <Contact />
+        </div>
+      )}
+      
+      <Footer onNavClick={handleNavClick} />
     </div>
   );
 };

@@ -1,12 +1,17 @@
 
 import { ArrowUp } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  onNavClick: (section: string) => void;
+}
+
+const Footer = ({ onNavClick }: FooterProps) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+    onNavClick('home');
   };
 
   return (
@@ -26,13 +31,40 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">サービス</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">人材紹介サービス</a>
+                <a 
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavClick('services');
+                  }}
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  人材紹介サービス
+                </a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">ホテル清掃サービス</a>
+                <a 
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavClick('services');
+                  }}
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  ホテル清掃サービス
+                </a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">留学支援業務</a>
+                <a 
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavClick('services');
+                  }}
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  留学支援業務
+                </a>
               </li>
             </ul>
           </div>

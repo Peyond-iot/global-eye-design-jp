@@ -16,7 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 218 70% 23%;
+    /* Enhanced blue primary color */
+    --primary: 210 100% 30%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 0 74% 57%;
@@ -68,7 +69,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-medium tracking-tight text-ge-blue;
+    @apply font-serif font-medium tracking-tight text-blue-800;
   }
 
   .container {
@@ -95,6 +96,11 @@
   /* Section transitions */
   section {
     @apply relative overflow-hidden;
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply backdrop-blur-md bg-white/20 border border-white/10 shadow-lg;
   }
 
   /* Improved mobile view */
