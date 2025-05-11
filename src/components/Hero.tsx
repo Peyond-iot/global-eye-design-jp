@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
-              GLOBAL <span className="text-ge-red">EYE</span>
+              <span className="text-white">GLOBAL</span> <span className="text-ge-red">EYE</span>
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-white leading-tight drop-shadow-md">
               あなたの未来をつなぐ
