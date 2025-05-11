@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,19 @@ const Navbar = () => {
         setScrolled(true);
       } else {
         setScrolled(false);
+      }
+
+      // Update active section based on scroll position
+      const sections = ['home', 'about', 'services', 'contact'];
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (!element) return false;
+        const rect = element.getBoundingClientRect();
+        return rect.top <= 100 && rect.bottom >= 100;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection);
       }
     };
 
@@ -27,12 +41,12 @@ const Navbar = () => {
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300',
         scrolled 
-          ? 'bg-white/95 backdrop-blur-sm shadow-md py-2' 
-          : 'bg-gradient-to-b from-black/60 to-transparent py-4'
+          ? 'bg-white/95 backdrop-blur-sm shadow-lg py-2' 
+          : 'bg-gradient-to-b from-blue-900/80 to-transparent py-4'
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" className="flex items-center">
+        <a href="#home" className="flex items-center">
           <img 
             src="/lovable-uploads/5518a94b-9cda-473f-84fd-75b513f94f4b.png" 
             alt="GLOBAL EYE Logo" 
@@ -42,18 +56,27 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {['ホーム', '会社概要', 'サービス', 'お問い合わせ'].map((item, index) => (
-            <a 
-              key={index}
-              href={`#${['home', 'about', 'services', 'contact'][index]}`}
-              className={cn(
-                "hover:text-ge-red transition-colors font-medium relative px-2 py-1 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-ge-red after:transition-all after:duration-300 hover:after:w-full",
-                scrolled ? "text-ge-dark" : "text-white"
-              )}
-            >
-              {item}
-            </a>
-          ))}
+          {['ホーム', '会社概要', 'サービス', 'お問い合わせ'].map((item, index) => {
+            const sectionId = ['home', 'about', 'services', 'contact'][index];
+            return (
+              <a 
+                key={index}
+                href={`#${sectionId}`}
+                className={cn(
+                  "transition-colors font-medium relative px-2 py-1",
+                  "after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full",
+                  activeSection === sectionId 
+                    ? "after:w-full text-ge-red after:bg-ge-red" 
+                    : "after:bg-ge-red hover:text-ge-red",
+                  scrolled 
+                    ? "text-ge-blue" 
+                    : "text-white"
+                )}
+              >
+                {item}
+              </a>
+            );
+          })}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -73,16 +96,24 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-sm w-full border-t shadow-lg animate-fade-in">
           <div className="container py-4 flex flex-col space-y-1">
-            {['ホーム', '会社概要', 'サービス', 'お問い合わせ'].map((item, index) => (
-              <a 
-                key={index}
-                href={`#${['home', 'about', 'services', 'contact'][index]}`}
-                className="text-ge-dark hover:text-ge-red hover:bg-gray-100 py-3 px-4 transition-colors font-medium rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item}
-              </a>
-            ))}
+            {['ホーム', '会社概要', 'サービス', 'お問い合わせ'].map((item, index) => {
+              const sectionId = ['home', 'about', 'services', 'contact'][index];
+              return (
+                <a 
+                  key={index}
+                  href={`#${sectionId}`}
+                  className={cn(
+                    "py-3 px-4 transition-colors font-medium rounded-md",
+                    activeSection === sectionId
+                      ? "text-ge-red bg-gray-100"
+                      : "text-ge-dark hover:text-ge-red hover:bg-gray-100"
+                  )}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              );
+            })}
           </div>
         </div>
       )}

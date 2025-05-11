@@ -99,14 +99,6 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <MapPin className="h-5 w-5 text-ge-red mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium text-gray-900">住所</h4>
-                    <p className="text-gray-700">335ｰ0003 埼玉県蕨市南町4ｰ39ｰ2<br />コスモプレイス蕨 3F</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
                   <Phone className="h-5 w-5 text-ge-red mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-medium text-gray-900">電話番号</h4>

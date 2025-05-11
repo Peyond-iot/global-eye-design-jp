@@ -59,12 +59,16 @@
     @apply border-border;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-medium tracking-tight;
+    @apply font-serif font-medium tracking-tight text-ge-blue;
   }
 
   .container {
@@ -72,7 +76,7 @@
   }
 
   .section-padding {
-    @apply py-12 sm:py-16 md:py-20;
+    @apply py-12 sm:py-16 md:py-24;
   }
 
   .fade-in-view {
@@ -81,5 +85,28 @@
 
   .fade-in-view.in-view {
     @apply opacity-100 translate-y-0;
+  }
+
+  /* Modern button styles */
+  .btn-modern {
+    @apply relative overflow-hidden rounded-md transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  /* Section transitions */
+  section {
+    @apply relative overflow-hidden;
+  }
+
+  /* Improved mobile view */
+  @media (max-width: 640px) {
+    .section-padding {
+      @apply py-10;
+    }
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
   }
 }

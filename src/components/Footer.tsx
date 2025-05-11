@@ -18,7 +18,7 @@ const Footer = () => {
               <span className="text-ge-red">GLOBAL</span> EYE
             </h2>
             <p className="text-white/80 mb-4">
-              お客様の多様なニーズに応える幅広いサービスを提供し、グローバルな視点でビジネスをサポートいたします。
+              グローバルな視点でビジネスをサポートいたします。
             </p>
           </div>
           
@@ -40,8 +40,6 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">お問い合わせ</h3>
             <address className="not-italic text-white/80">
-              <p>335ｰ0003 埼玉県蕨市南町4ｰ39ｰ2</p>
-              <p>コスモプレイス蕨 3F</p>
               <p className="mt-2">電話: 048-278-4550</p>
               <p>メール: globaleye025@gmail.com</p>
             </address>

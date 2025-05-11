@@ -11,36 +11,31 @@ const Hero = () => {
       id="home" 
       className={`relative ${isMobile ? 'h-[40vh]' : 'h-[60vh]'} flex items-center justify-center overflow-hidden`}
     >
-      {/* Background image with less overlay opacity for better clarity */}
+      {/* Background image with reduced overlay opacity for better clarity */}
       <div className="absolute inset-0 w-full h-full">
         <img 
           src="/lovable-uploads/6fd9fd41-a4b8-4021-b483-0c13546d8127.png" 
           alt="Tokyo cityscape" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-ge-blue/40 backdrop-blur-[2px]"></div>
+        <div className="absolute inset-0 bg-ge-blue/30"></div>
       </div>
 
       {/* Content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 flex flex-col items-center justify-center text-center">
-        {/* Slogan and content */}
+        {/* Logo and slogan */}
         <div className="max-w-3xl mx-auto fade-in-view">
-          <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-4 drop-shadow-md">
-            あなたの将来をつなぐ
-          </h2>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
-            グローバルな視点でビジネスをサポート
+          <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
+            GLOBAL <span className="text-ge-red">EYE</span>
           </h1>
-          <p className="text-lg md:text-xl text-white mb-8 drop-shadow-md">
-            人材紹介、ホテル清掃サービス、留学支援業務を通じて
-            <br className="hidden sm:block" />
-            お客様のニーズに合わせた最適なソリューションを提供します
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-6 drop-shadow-md">
+            あなたの未来をつなぐ
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button 
               variant="secondary" 
               size="lg"
-              className="group shadow-lg"
+              className="group shadow-lg bg-ge-red hover:bg-red-700 text-white"
               asChild
             >
               <a href="#services">
