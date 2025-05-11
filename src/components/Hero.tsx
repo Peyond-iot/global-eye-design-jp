@@ -7,51 +7,46 @@ const Hero = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section 
-      id="home" 
-      className={`relative ${isMobile ? 'h-[60vh]' : 'h-[90vh]'} flex items-center justify-center overflow-hidden`}
-    >
-      {/* High-quality background image with Tokyo/high-tech theme */}
-      <div className="absolute inset-0 w-full h-full">
+    <section id="home" className="relative flex flex-col">
+      {/* Navigation placeholder for proper spacing */}
+      <div className="h-16"></div>
+      
+      {/* Banner image with overlay text */}
+      <div className="relative w-full" style={{ height: isMobile ? '40vh' : '60vh' }}>
         <img 
           src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&q=100" 
           alt="Tokyo cityscape" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-blue-900/20"></div> {/* Reduced opacity overlay */}
-      </div>
-
-      {/* Content container */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 flex flex-col items-center justify-center text-center">
-        {/* Logo and slogan */}
-        <div className="max-w-3xl mx-auto fade-in-view bg-black/30 backdrop-blur-sm p-8 rounded-lg">
-          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
-            GLOBAL <span className="text-ge-red">EYE</span>
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-8 drop-shadow-md">
-            あなたの未来をつなぐ
-          </h2>
-          
-          <div className="space-y-6 text-white">
-            <p className="text-xl font-medium">グローバルな視点でビジネスをサポート</p>
-            <p className="text-lg">人材紹介、ホテル清掃サービス、留学支援業務を通じて</p>
-            <p className="text-lg">お客様のニーズに合わせた最適なソリューションを提供します</p>
+        <div className="absolute inset-0 bg-blue-900/30"></div>
+        
+        {/* Centered logo and slogan */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
+              GLOBAL <span className="text-ge-red">EYE</span>
+            </h1>
+            <h2 className="text-xl md:text-2xl font-medium text-white leading-tight drop-shadow-md">
+              あなたの未来をつなぐ
+            </h2>
           </div>
+        </div>
+      </div>
+      
+      {/* Content section below image */}
+      <div className="container mx-auto px-4 py-12 text-center">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <p className="text-xl font-medium text-ge-blue">グローバルな視点でビジネスをサポート</p>
+          <p className="text-lg text-gray-700">人材紹介、ホテル清掃サービス、留学支援業務を通じて</p>
+          <p className="text-lg text-gray-700">お客様のニーズに合わせた最適なソリューションを提供します</p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <div className="pt-6">
             <Button 
               variant="secondary" 
               size="lg"
-              className="group shadow-lg bg-ge-red hover:bg-red-700 text-white"
+              className="group shadow-md bg-ge-red hover:bg-red-700 text-white"
             >
               サービスを見る <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="bg-transparent border-white text-white hover:bg-white/20 shadow-lg"
-            >
-              お問い合わせ
             </Button>
           </div>
         </div>

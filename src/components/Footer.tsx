@@ -15,21 +15,21 @@ const Footer = ({ onNavClick }: FooterProps) => {
   };
 
   return (
-    <footer className="bg-ge-blue text-white">
-      <div className="container mx-auto py-8 md:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-ge-blue text-white py-6">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
-            <h2 className="text-xl font-bold mb-4">
+            <h2 className="text-xl font-bold mb-2">
               <span className="text-ge-red">GLOBAL</span> EYE
             </h2>
-            <p className="text-white/80 mb-4">
+            <p className="text-white/80 text-sm">
               グローバルな視点でビジネスをサポートいたします。
             </p>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">サービス</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-bold mb-2">サービス</h3>
+            <ul className="space-y-1 text-sm">
               <li>
                 <a 
                   href="#"
@@ -70,22 +70,22 @@ const Footer = ({ onNavClick }: FooterProps) => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">お問い合わせ</h3>
-            <address className="not-italic text-white/80">
-              <p className="mt-2">電話: 048-278-4550</p>
+            <h3 className="text-lg font-bold mb-2">お問い合わせ</h3>
+            <address className="not-italic text-white/80 text-sm">
+              <p>電話: 048-278-4550</p>
               <p>メール: globaleye025@gmail.com</p>
             </address>
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm">
+        <div className="mt-4 pt-4 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-white/60 text-xs">
             &copy; {new Date().getFullYear()} 株式会社GLOBAL EYE All Rights Reserved.
           </p>
           
           <button 
             onClick={scrollToTop}
-            className="mt-4 sm:mt-0 p-3 rounded-full bg-ge-red hover:bg-red-700 transition-colors"
+            className="mt-3 sm:mt-0 p-2 rounded-full bg-ge-red hover:bg-red-700 transition-colors"
             aria-label="Scroll to top"
           >
             <ArrowUp className="h-4 w-4" />

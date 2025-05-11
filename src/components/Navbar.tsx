@@ -10,22 +10,6 @@ interface NavbarProps {
 
 const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const handleNavigation = (sectionId: string) => {
     onNavClick(sectionId);
@@ -33,14 +17,7 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
   };
 
   return (
-    <header 
-      className={cn(
-        'fixed top-0 w-full z-50 transition-all duration-300',
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-sm shadow-lg py-2' 
-          : 'bg-gradient-to-b from-blue-900/80 to-transparent py-4'
-      )}
-    >
+    <header className="fixed top-0 w-full z-50 bg-white shadow-sm py-2">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a 
           href="#" 
@@ -74,10 +51,7 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
                   "after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full",
                   activeSection === sectionId 
                     ? "after:w-full text-ge-red after:bg-ge-red" 
-                    : "after:bg-ge-red hover:text-ge-red",
-                  scrolled 
-                    ? "text-ge-blue" 
-                    : "text-white"
+                    : "after:bg-ge-red hover:text-ge-red text-ge-blue"
                 )}
               >
                 {item}
@@ -88,20 +62,20 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden p-2 focus:outline-none rounded-full bg-white/20 hover:bg-white/30 transition-colors"
+          className="md:hidden p-2 focus:outline-none rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? 
-            <X className={scrolled ? "text-ge-dark" : "text-white"} /> : 
-            <Menu className={scrolled ? "text-ge-dark" : "text-white"} />
+            <X className="text-ge-dark" /> : 
+            <Menu className="text-ge-dark" />
           }
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-sm w-full border-t shadow-lg animate-fade-in">
+        <div className="md:hidden bg-white w-full border-t shadow-lg animate-fade-in">
           <div className="container py-4 flex flex-col space-y-1">
             {['ホーム', '会社概要', 'サービス', 'お問い合わせ'].map((item, index) => {
               const sectionId = ['home', 'about', 'services', 'contact'][index];
