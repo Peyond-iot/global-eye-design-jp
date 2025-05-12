@@ -19,25 +19,28 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-sm py-2">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a 
-          href="#" 
-          onClick={(e) => { 
-            e.preventDefault(); 
-            handleNavigation('home'); 
-          }} 
-          className="flex items-center"
-        >
-          <img 
-            src="/lovable-uploads/5518a94b-9cda-473f-84fd-75b513f94f4b.png" 
-            alt="GLOBAL EYE Logo" 
-            className="h-10 md:h-12 drop-shadow-sm" 
-          />
-        </a>
+        <div className="flex items-center">
+          <a 
+            href="#" 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              handleNavigation('home'); 
+            }} 
+            className="flex items-center"
+          >
+            <img 
+              src="/lovable-uploads/20627401-4865-4b2e-8388-61168036a600.png" 
+              alt="GLOBAL EYE Logo" 
+              className="h-10 md:h-12 drop-shadow-sm" 
+            />
+          </a>
+          <span className="ml-3 text-ge-blue font-medium hidden sm:block">株式会社GLOBAL EYE</span>
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {['ホーム', '会社概要', 'サービス', 'お問い合わせ'].map((item, index) => {
-            const sectionId = ['home', 'about', 'services', 'contact'][index];
+          {['ホーム', '会社概要', 'お問い合わせ'].map((item, index) => {
+            const sectionId = ['home', 'about', 'contact'][index];
             return (
               <a 
                 key={index}
@@ -77,8 +80,8 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
       {isMenuOpen && (
         <div className="md:hidden bg-white w-full border-t shadow-lg animate-fade-in">
           <div className="container py-4 flex flex-col space-y-1">
-            {['ホーム', '会社概要', 'サービス', 'お問い合わせ'].map((item, index) => {
-              const sectionId = ['home', 'about', 'services', 'contact'][index];
+            {['ホーム', '会社概要', 'お問い合わせ'].map((item, index) => {
+              const sectionId = ['home', 'about', 'contact'][index];
               return (
                 <a 
                   key={index}

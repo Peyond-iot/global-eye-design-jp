@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import Services from '@/components/Services';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -69,12 +68,6 @@ const Index = () => {
       {activeSection === 'about' && (
         <div className="bg-white pt-20">
           <About />
-        </div>
-      )}
-      
-      {activeSection === 'services' && (
-        <div className="bg-ge-gray pt-20">
-          <Services />
         </div>
       )}
       

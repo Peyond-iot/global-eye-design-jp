@@ -12,9 +12,10 @@ const About = () => {
         
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="p-6 md:p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-ge-blue mb-4">会社情報</h3>
+            <div className="flex flex-col items-center">
+              {/* Company Information */}
+              <div className="w-full max-w-2xl mb-8">
+                <h3 className="text-xl font-bold text-ge-blue mb-4 text-center">会社情報</h3>
                 <table className="w-full">
                   <tbody>
                     <tr className="border-b">
@@ -50,9 +51,10 @@ const About = () => {
                 </table>
               </div>
               
-              <div>
-                <h3 className="text-xl font-bold text-ge-blue mb-4">お問い合わせ</h3>
-                <div className="space-y-4">
+              {/* Contact Information */}
+              <div className="w-full max-w-2xl">
+                <h3 className="text-xl font-bold text-ge-blue mb-4 text-center">お問い合わせ</h3>
+                <div className="space-y-4 flex flex-col items-center">
                   <div className="flex items-start">
                     <Building className="h-5 w-5 text-ge-red mr-3 mt-1 flex-shrink-0" />
                     <p>335ｰ0003 埼玉県蕨市南町4ｰ39ｰ2コスモプレイス蕨 3F</p>
@@ -64,19 +66,6 @@ const About = () => {
                   <div className="flex items-center">
                     <Mail className="h-5 w-5 text-ge-red mr-3 flex-shrink-0" />
                     <p>globaleye025@gmail.com</p>
-                  </div>
-                </div>
-                
-                <div className="mt-6 bg-ge-gray p-4 rounded-md">
-                  <div className="aspect-w-16 aspect-h-9">
-                    <iframe 
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3231.6847656493196!2d139.6833596!3d35.8153992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c0ee8707f8c7%3A0xa0fe4ea1b4a7a838!2s4-39-2%20Minaminacho%2C%20Warabi%2C%20Saitama%20335-0003%2C%20Japan!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
-                      className="w-full h-60 rounded-md"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      title="GLOBAL EYE Location"
-                    ></iframe>
                   </div>
                 </div>
               </div>
