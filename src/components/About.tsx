@@ -7,7 +7,6 @@ const About = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-ge-blue mb-4">会社概要</h2>
-          <p className="text-ge-dark text-lg">2025年に設立された株式会社GLOBAL EYEは、人材紹介から留学支援まで幅広いサービスを提供しています。</p>
         </div>
         
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">

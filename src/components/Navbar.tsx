@@ -19,7 +19,7 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-sm py-2">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex flex-col items-center sm:flex-row mx-auto sm:mx-0">
           <a 
             href="#" 
             onClick={(e) => { 
@@ -31,10 +31,10 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
             <img 
               src="/lovable-uploads/20627401-4865-4b2e-8388-61168036a600.png" 
               alt="GLOBAL EYE Logo" 
-              className="h-10 md:h-12 drop-shadow-sm" 
+              className="h-14 md:h-16 drop-shadow-sm" 
             />
           </a>
-          <span className="ml-3 text-ge-blue font-medium hidden sm:block">株式会社GLOBAL EYE</span>
+          <span className="ml-3 text-ge-blue font-medium block">株式会社GLOBAL EYE</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden p-2 focus:outline-none rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+          className="md:hidden p-2 focus:outline-none rounded-full bg-gray-100 hover:bg-gray-200 transition-colors absolute right-4"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >

@@ -22,9 +22,6 @@ const Footer = ({ onNavClick }: FooterProps) => {
             <h2 className="text-xl font-bold mb-2">
               <span className="text-white bg-ge-blue px-2 py-1">GLOBAL</span> <span className="text-white bg-ge-red px-2 py-1">EYE</span>
             </h2>
-            <p className="text-white/80 text-sm">
-              グローバルな視点でビジネスをサポートいたします。
-            </p>
           </div>
           
           <div>
