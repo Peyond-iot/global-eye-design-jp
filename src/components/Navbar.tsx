@@ -31,9 +31,9 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
             <img 
               src="/lovable-uploads/20627401-4865-4b2e-8388-61168036a600.png" 
               alt="GLOBAL EYE Logo" 
-              className="h-14 md:h-16 drop-shadow-sm" 
+              className="h-16 md:h-20 my-auto drop-shadow-sm" 
             />
-            <span className="ml-3 text-ge-blue font-medium block">株式会社GLOBAL EYE</span>
+            <span className="ml-3 text-ge-blue font-medium">株式会社GLOBAL EYE</span>
           </a>
         </div>
 
