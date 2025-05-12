@@ -19,7 +19,7 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-sm py-2">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex flex-col items-center sm:flex-row mx-auto sm:mx-0">
+        <div className="flex items-center mx-auto sm:mx-0">
           <a 
             href="#" 
             onClick={(e) => { 
@@ -33,8 +33,8 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
               alt="GLOBAL EYE Logo" 
               className="h-14 md:h-16 drop-shadow-sm" 
             />
+            <span className="ml-3 text-ge-blue font-medium block">株式会社GLOBAL EYE</span>
           </a>
-          <span className="ml-3 text-ge-blue font-medium block">株式会社GLOBAL EYE</span>
         </div>
 
         {/* Desktop Navigation */}

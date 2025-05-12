@@ -20,7 +20,7 @@ const Footer = ({ onNavClick }: FooterProps) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h2 className="text-xl font-bold mb-2">
-              <span className="text-white bg-ge-blue px-2 py-1">GLOBAL</span> <span className="text-white bg-ge-red px-2 py-1">EYE</span>
+              <span className="text-white bg-ge-blue px-2 py-1">GLOBAL</span> <span className="text-white px-2 py-1">EYE</span>
             </h2>
           </div>
           
