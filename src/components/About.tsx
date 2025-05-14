@@ -15,39 +15,36 @@ const About = () => {
               {/* Company Information */}
               <div className="w-full max-w-2xl mb-8">
                 <h3 className="text-xl font-bold text-ge-blue mb-4 text-center">会社情報</h3>
-                <table className="w-full">
-                  <tbody>
-                    <tr className="border-b">
-                      <td className="py-3 pr-4 align-top font-medium text-ge-dark">会社名</td>
-                      <td className="py-3 align-top">株式会社GLOBAL EYE（GLOBAL EYE CO.,Ltd)</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-3 pr-4 align-top font-medium text-ge-dark">会社設立</td>
-                      <td className="py-3 align-top">2025年2月6日</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-3 pr-4 align-top font-medium text-ge-dark">資本金</td>
-                      <td className="py-3 align-top">500万円</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-3 pr-4 align-top font-medium text-ge-dark">代表取締役</td>
-                      <td className="py-3 align-top">多満 在美奈</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-3 pr-4 align-top font-medium text-ge-dark">事業内容</td>
-                      <td className="py-3 align-top">
-                        <ul className="list-disc list-inside space-y-1">
-                          <li>有料職業紹介事業</li>
-                          <li>外国人留学生の受入先の紹介その他の支援業務</li>
-                          <li>在留ビザに関数業務</li>
-                          <li>人材育成のための教育事業及びカウンセリング並びにそれらに関するコンサルティング業務</li>
-                          <li>外国語の翻訳及び通訳並びに出版業</li>
-                          <li>ビルメンテナンス業及び清掃業</li>
-                        </ul>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="w-full">
+                  <div className="border-b py-3 flex flex-row">
+                    <div className="font-medium text-ge-dark min-w-[120px]">会社名</div>
+                    <div>株式会社GLOBAL EYE（GLOBAL EYE CO.,Ltd)</div>
+                  </div>
+                  <div className="border-b py-3 flex flex-row">
+                    <div className="font-medium text-ge-dark min-w-[120px]">会社設立</div>
+                    <div>2025年2月6日</div>
+                  </div>
+                  <div className="border-b py-3 flex flex-row">
+                    <div className="font-medium text-ge-dark min-w-[120px]">資本金</div>
+                    <div>500万円</div>
+                  </div>
+                  <div className="border-b py-3 flex flex-row">
+                    <div className="font-medium text-ge-dark min-w-[120px]">代表取締役</div>
+                    <div>多満 在美奈</div>
+                  </div>
+                  <div className="border-b py-3 flex flex-row">
+                    <div className="font-medium text-ge-dark min-w-[120px]">事業内容</div>
+                    <div>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>有料職業紹介事業</li>
+                        <li>外国人留学生の受入先の紹介その他の支援業務</li>
+                        <li>人材育成のための教育事業及びカウンセリング並びにそれらに関するコンサルティング業務</li>
+                        <li>外国語の翻訳及び通訳並びに出版業</li>
+                        <li>ビルメンテナンス業及び清掃業</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
               
               {/* Contact Information */}

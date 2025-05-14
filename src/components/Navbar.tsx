@@ -17,7 +17,7 @@ const Navbar = ({ activeSection, onNavClick }: NavbarProps) => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white shadow-sm py-2">
+    <header className="fixed top-0 w-full z-50 bg-sky-50 shadow-sm py-2">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center sm:mx-0">
           <a 
