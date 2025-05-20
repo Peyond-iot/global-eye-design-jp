@@ -118,7 +118,7 @@ const Contact = () => {
                   <MapPin className="h-5 w-5 text-ge-red mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-medium text-gray-900">住所</h4>
-                    <p className="text-gray-700">335ｰ0003 埼玉県蕨市南町4ｰ39ｰ2コスモプレイス蕨 3F</p>
+                    <p className="text-gray-700">335ｰ0003 埼玉県蕨市南町4ｰ39ｰ2コスモプレイス蕨 310</p>
                   </div>
                 </div>
               </div>
