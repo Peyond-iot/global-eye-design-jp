@@ -53,7 +53,7 @@ const About = () => {
                 <div className="space-y-4 flex flex-col items-center">
                   <div className="flex items-start">
                     <Building className="h-5 w-5 text-ge-red mr-3 mt-1 flex-shrink-0" />
-                    <p>335ｰ0003 埼玉県蕨市南町4ｰ39ｰ2コスモプレイス蕨 3F</p>
+                    <p>335ｰ0003 埼玉県蕨市南町4ｰ39ｰ2コスモプレイス蕨 310</p>
                   </div>
                   <div className="flex items-center">
                     <Phone className="h-5 w-5 text-ge-red mr-3 flex-shrink-0" />
