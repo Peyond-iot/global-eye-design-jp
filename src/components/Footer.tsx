@@ -27,7 +27,7 @@ const Footer = ({ onNavClick }: FooterProps) => {
           <div>
             <h3 className="text-lg font-bold mb-2 text-white">サービス</h3>
             <ul className="space-y-1 text-sm">
-              <li>
+{/*               <li>
                 <a 
                   href="#"
                   onClick={(e) => {
@@ -41,7 +41,7 @@ const Footer = ({ onNavClick }: FooterProps) => {
                 >
                   人材紹介サービス
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a 
                   href="#"
