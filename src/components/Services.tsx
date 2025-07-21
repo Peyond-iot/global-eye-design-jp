@@ -3,12 +3,12 @@ import { User, Home, Book } from 'lucide-react';
 
 const Services = () => {
   const services = [
-    {
-      title: "人材紹介サービス",
-      icon: <User className="h-12 w-12 text-ge-red mb-4" />,
-      description: "GLOBAL EYEでは、日本人および外国人の人材紹介サービスを提供しております。企業様の多様なニーズに合わせて、最適な人材をご提案いたします。経験豊富なコンサルタントが、採用から定着までしっかりサポートいたします。",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop"
-    },
+    // {
+    //   title: "人材紹介サービス",
+    //   icon: <User className="h-12 w-12 text-ge-red mb-4" />,
+    //   description: "GLOBAL EYEでは、日本人および外国人の人材紹介サービスを提供しております。企業様の多様なニーズに合わせて、最適な人材をご提案いたします。経験豊富なコンサルタントが、採用から定着までしっかりサポートいたします。",
+    //   image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop"
+    // },
     {
       title: "ホテル清掃サービス",
       icon: <Home className="h-12 w-12 text-ge-red mb-4" />,
