@@ -23,11 +23,8 @@ const Hero = () => {
         {/* Centered text on image */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="text-center">
-           {/* <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
-              多様な人材で、未来の可能性を広げる
-            </h1> */}
             <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
-              　GLOBAL EYE
+              多様な人材で、未来の可能性を広げる
             </h1>
           </div>
         </div>
