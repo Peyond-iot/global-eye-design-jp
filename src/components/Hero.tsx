@@ -61,7 +61,7 @@ const Hero = () => {
 
           <div className="flex flex-col space-y-8">
             {/* First Service - Changed to row layout */}
-{/*             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl">
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3">
                   <img 
@@ -82,7 +82,7 @@ const Hero = () => {
                   <p className="text-ge-dark">GLOBAL EYEでは、日本人および外国人の人材紹介サービスを提供しております。企業様の多様なニーズに合わせて、最適な人材をご提案いたします。経験豊富なコンサルタントが、採用から定着までしっかりサポートいたします。</p>
                 </div>
               </div>
-            </div> */}
+            </div>
             
             {/* Second Service */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-xl">
