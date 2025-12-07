@@ -41,10 +41,7 @@ const About = () => {
                     <div className="font-medium text-ge-dark min-w-[120px]">
                       代表取締役
                     </div>
-                    <div class="flex flex-col">
-                      <div>多満 在美奈</div>
-                      <div>有料職業紹介事業 許可番号　11-ユ-301397</div>
-                    </div>
+                    <div>多満 在美奈</div>
                   </div>
                   <div className="border-b py-3 flex flex-row">
                     <div className="font-medium text-ge-dark min-w-[120px]">
@@ -61,6 +58,12 @@ const About = () => {
                         <li>ビルメンテナンス業及び清掃業</li>
                       </ul>
                     </div>
+                  </div>
+                  <div class="border-b py-3 flex flex-row">
+                    <div class="font-medium text-ge-dark min-w-[120px]">
+                      有料職業紹介事業 許可番号
+                    </div>
+                    <div class="ml-2">11-ユ-301397</div>
                   </div>
                 </div>
               </div>
