@@ -51,10 +51,10 @@ const About = () => {
                       <ul className="list-disc list-inside space-y-1">
                         <li>有料職業紹介事業</li>
                         <li>外国人留学生の受入先の紹介その他の支援業務</li>
-                        <li>
+                        {/* <li>
                           人材育成のための教育事業及びカウンセリング並びにそれらに関するコンサルティング業務
                         </li>
-                        <li>外国語の翻訳及び通訳並びに出版業</li>
+                        <li>外国語の翻訳及び通訳並びに出版業</li> */}
                         <li>ビルメンテナンス業及び清掃業</li>
                       </ul>
                     </div>
@@ -63,7 +63,7 @@ const About = () => {
                     <div class="font-medium text-ge-dark min-w-[120px]">
                       有料職業紹介事業 許可番号
                     </div>
-                    <div class="ml-2">11-ユ-301397</div>
+                    <div class="ml-3">11-ユ-301397</div>
                   </div>
                 </div>
               </div>
